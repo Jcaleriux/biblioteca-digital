@@ -1,0 +1,33 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# PHP / Composer
+/vendor/
+composer.lock
+
+# Node
+/node_modules/
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment / credentials
+.env
+.env.local
+config/*.local.php
+Codigo/config/conexion.php
+
+# Uploaded files (keep out of repo)
+Codigo/uploads/
+
+# OS generated files
+.classpath
+.project
+
+# Ignore database export backups (optional)
+*.sql.gz
