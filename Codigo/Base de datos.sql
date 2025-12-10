@@ -2,7 +2,6 @@ create database biblioteca;
 
 use biblioteca;
 
-
 -- Tabla de usuarios
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -12,10 +11,6 @@ CREATE TABLE usuarios (
     password VARCHAR(255) NOT NULL,
     rol ENUM('admin','lector') DEFAULT 'lector'
 );
-
-select * from usuarios;
-UPDATE `biblioteca`.`usuarios` SET `correo` = 'pepe@gmail.com' WHERE (`id` = '3');
-DELETE FROM `biblioteca`.`libros` WHERE (`id` = '4');
 
 -- Tabla de libros
 CREATE TABLE libros (
@@ -30,8 +25,7 @@ CREATE TABLE libros (
     archivo VARCHAR(255) NULL,
     disponible TINYINT(1) DEFAULT 1
 );
-select * FROM libros;
-select * FROM prestamos;
+
 -- Tabla de préstamos
 CREATE TABLE prestamos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -44,4 +38,8 @@ CREATE TABLE prestamos (
     FOREIGN KEY (id_libro) REFERENCES libros(id)
 );
 
-
+-- select * from usuarios; -- consulta de tabla de usuarios
+-- select * FROM libros; --consulta de tabla de libros
+-- select * FROM prestamos; -- consulta de tabla de prestamos
+-- UPDATE `biblioteca`.`usuarios` SET `correo` = 'pepe@gmail.com' WHERE (`id` = '3'); -- consulta para actualizar info de usuario
+-- DELETE FROM `biblioteca`.`libros` WHERE (`id` = '4'); -- Consulta para eliminar de BD biblioteca, tabla "libros" ID "4"
