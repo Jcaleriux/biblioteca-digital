@@ -1,0 +1,506 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+/* Estilos para el menú de navegación*/
+.menu {
+    background: #1a3b5d;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu li {
+    margin: 0 20px;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0;
+    display: block;
+    transition: color 0.3s, background 0.3s;
+}
+.menu a:hover {
+    color: #ffd700;
+    background: #25476a;
+}
+/* Estilos para el pie de página */
+.footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 20px;
+    background: #1a3b5d;
+    color: #fff;
+}
+/* Estilos para la página de inicio */
+.inicio-bg {
+    background-image: url('../img/fondo_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inicio-container {
+    margin-top: 100px;
+    background: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    text-align: center;
+}
+/* Estilos para la página de registro */
+.registro-bg {
+    background-image: url('../img/fondo_registro.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registro-container {
+    margin-top: 100px;
+    background: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.form-registro {
+    width: 100%;
+}
+.lista-registro {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lista-registro li {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-icono {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+}
+.input-icono input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+}
+.icono-user, .icono-mail, .icono-lock {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #25476a;
+}
+.icono-user::before { content: '\1F464'; }
+.icono-mail::before { content: '\2709'; }
+.icono-lock::before { content: '\1F512'; }
+.lista-registro label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #1a3b5d;
+    width: 100%;
+    margin-left: 2px;
+    text-align: left;
+}
+.lista-registro input[type="text"],
+.lista-registro input[type="email"],
+.lista-registro input[type="password"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Decidí formatear el padding de esta manera para dejar bien el icono*/
+    border: 1px solid #bfcad6;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f8fafc;
+    transition: border-color 0.3s;
+}
+.lista-registro input:focus {
+    border-color: #25476a;
+    outline: none;
+}
+.btn-registro {
+    background: #1a3b5d;
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.btn-registro:hover {
+    background: #25476a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+/* Estilos para las tarjetas de inicio */
+.tarjetas-inicio {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.tarjeta {
+    background: #1a3b5d;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.tarjeta:hover {
+    background: #25476a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+/* Estilos para pagina de login */
+.login-bg {
+    background-image: url('../img/fondo_login.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.login-container {
+    background: rgba(255,255,255,0.85);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+.form-login {
+    width: 100%;
+}
+.lista-login {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lista-login li {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-icono-login {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+}
+.input-icono-login input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+}
+.icono-mail-login, .icono-lock-login {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #25476a;
+}
+.icono-mail-login::before { content: '\2709'; }
+.icono-lock-login::before { content: '\1F512'; }
+.lista-login label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #1a3b5d;
+    width: 100%;
+    margin-left: 2px;
+    text-align: left;
+}
+.lista-login input[type="email"],
+.lista-login input[type="password"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #bfcad6;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f8fafc;
+    transition: border-color 0.3s;
+}
+.lista-login input:focus {
+    border-color: #25476a;
+    outline: none;
+}
+.btn-login {
+    background: #1a3b5d;
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.btn-login:hover {
+    background: #25476a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+/* Estilos para pagina de panel admin */
+.admin-bg {
+    background-image: url('../img/fondo_panel_admin.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; /* ligero fallback */
+}
+.admin-container {
+    margin-top: 100px;
+    background: rgba(255,255,255,0.95);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.btn-libro {
+    background: #1a3b5d;
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.btn-libro:hover {
+    background: #25476a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.form-libro {
+    margin-top: 30px;
+    max-width: 90%;
+    background: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.lista-libro {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lista-libro li {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-icono-libro {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+}
+.input-icono-libro input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+}
+.icono-user-libro, .icono-mail-libro, .icono-lock-libro {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #25476a;
+}
+.icono-user-libro::before { content: '\1F464'; }
+.icono-mail-libro::before { content: '\2709'; }
+.icono-lock-libro::before { content: '\1F512'; }
+.lista-libro label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #1a3b5d;
+    width: 100%;
+    margin-left: 2px;
+    text-align: center;
+}
+.lista-libro input[type="text"],
+.lista-libro input[type="number"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #bfcad6;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #f8fafc;
+    transition: border-color 0.3s;
+}
+.lista-libro input:focus {
+    border-color: #25476a;
+    outline: none;
+}
+.tabla-libros {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.tabla-libros th, .tabla-libros td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e3eaf2;
+    text-align: center;
+}
+.tabla-libros th {
+    background: #1a3b5d;
+    color: #fff;
+    font-weight: bold;
+}
+.tabla-libros tr {
+    transition: background 0.3s;
+}
+.tabla-libros tr:hover {
+    background: #e3eaf2;
+}
+.acciones-libro button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+.acciones-libro .editar {
+    color: #25476a;
+}
+.acciones-libro .eliminar {
+    color: #b30000;
+}
+
+/* Estilos para pagina catalogo */
+.catalogo-bg {
+    background-image: url('../img/fondo_catalogo.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.catalogo-container {
+    margin-top: 50px;
+    background: rgba(255,255,255,0.95);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    text-align: center;
+}
+/* Estilos para la página de préstamos */
+.prestamos-bg {
+    background-image: url('../img/fondo_prestamos.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #888; /* fallback */
+}
+.prestamos-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background: rgba(255,255,255,0.95);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-align: center;
+}
+/* Estilos para la página de detalle del libro */
+.detalle-bg {
+    background-image: url('../img/fondo_detalle_libro.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detalle-container {
+    margin-top: 50px;
+    background: rgba(255,255,255,0.92);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-align: left;
+}
+.detalle-container h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.detalle-meta {
+    max-width: 600px;
+}
+.detalle-portada img {
+    width: 100%;
+    border-radius: 8px;
+}
+
